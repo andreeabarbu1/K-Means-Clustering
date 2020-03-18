@@ -1,16 +1,16 @@
 	Datele de intrare vor fi citite din cele doua tipuri de fisiere: .param si .points. Voi folosi functia load pentru a 
-	citi numarul NC si functia dlmread pentru citirea matricei de puncte, incepand cu linia 6.
+citi numarul NC si functia dlmread pentru citirea matricei de puncte, incepand cu linia 6.
 	Se calculeaza coordonatele centroizilor astfel: se aleg cei NC centroizi din multimea punctelor aleator, fiecare punct
-	fiind atribuit grupului corespunzator. Am folosit distanta euclidiana.
+fiind atribuit grupului corespunzator. Am folosit distanta euclidiana.
 	Se recalculeaza pozitiile centroizilor si se repeta pana nu se mai modifica pozitiile centroizilor.
-	Am repetat pentru un numar maxim de iteratii = 200.
+Am repetat pentru un numar maxim de iteratii = 200.
 	Pentru reprezentarea grafica a algoritmulului K-Means: se verifica pentru fiecare punct carui grup ii apartine si 
-	retinem indexul centroidului. Un punct apartine centroidului fata de care distanta este minima. Am folosit functia 
-	scatter3 pentru reprezentarea grafica. Pentru ca fiecare grup sa fie colorat diferit, am generat o matrice cu 1 pe
-	diagonala si apoi la reprezentarea fiecarui punct indexul va indica culoarea corespunzatoare.
+retinem indexul centroidului. Un punct apartine centroidului fata de care distanta este minima. Am folosit functia 
+scatter3 pentru reprezentarea grafica. Pentru ca fiecare grup sa fie colorat diferit, am generat o matrice cu 1 pe
+diagonala si apoi la reprezentarea fiecarui punct indexul va indica culoarea corespunzatoare.
 	 Costul unui cluster este suma distantelor de la centroid la fiecare dintre punctele ce apartin clusterului respectiv.
-	 Pentru fiecare punct calculez distanta fata de centroid cu ajutorul normei si o adun la cost.
-	Pentru reprezentarea grafica a costului total in functie de numarul de clustere: pentru fiecare NC {1..10} voi obtine
-	centroizi prin apelarea functiei clustering_pc, anterior implementate, si apoi retin in pozitia specifica indexului 
-	NC costul corespunzator - compute_cost_pc.
+Pentru fiecare punct calculez distanta fata de centroid cu ajutorul normei si o adun la cost.
+Pentru reprezentarea grafica a costului total in functie de numarul de clustere: pentru fiecare NC {1..10} voi obtine
+centroizi prin apelarea functiei clustering_pc, anterior implementate, si apoi retin in pozitia specifica indexului 
+NC costul corespunzator - compute_cost_pc.
 	Graficul va fi trasat cu ajutorul functiei plot. Axa X reprezinta NC, iar axa Y este costul.
